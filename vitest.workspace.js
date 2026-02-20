@@ -7,6 +7,9 @@ export default defineWorkspace([
       include: ["**/*.node.test.{js,jsx}"],
       name: "happy-dom",
       environment: "happy-dom",
+      coverage: {
+        reporter: ["text", "json", "html"],
+      },
     },
   },
   {
@@ -19,6 +22,9 @@ export default defineWorkspace([
         provider: "playwright",
         enabled: true,
         name: "chromium",
+      },
+      coverage: {
+        reporter: ["text", "json", "html"],
       },
     },
   },
